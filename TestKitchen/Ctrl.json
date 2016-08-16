@@ -1,0 +1,28 @@
+ [
+  {
+  "ctrlName": "CookBookViewController"
+  "titleName": "食材"
+  "imageName": "home"
+  },
+  {
+  "ctrlName": "CommunityViewController"
+  "titleName": "社区"
+  "imageName": "community"
+  },
+  {
+  "ctrlName": "MallViewController"
+  "titleName": "商城"
+  "imageName": "shop"
+  },
+  {
+  "ctrlName": "FoodClassViewController"
+  "titleName": "食客"
+  "imageName": "shike"
+  },
+  {
+  "ctrlName": "ProfileViewController"
+  "titleName": "我的"
+  "imageName": "mine"
+  }
+  ]
+//["home", "community", "shop", "shike", "mine"]
