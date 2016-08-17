@@ -10,10 +10,14 @@ import UIKit
 
 class CookBookViewController: BaseViewController {
 
+    //食材首页的推荐视图
+    private var recommendView: CBRecommendView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createMyNav() //导航
-        self.downloadRecommendData()
+        createMyNav() //导航
+        downloadRecommendData()
+        createHomePageView()
         // Do any additional setup after loading the view.
     }
     
@@ -21,6 +25,22 @@ class CookBookViewController: BaseViewController {
         //扫一扫
         addNavBtn("saoyisao@2x", target: self, action: #selector(scanAction), isLeft: true)
         addNavBtn("search@2x", target: self, action: #selector(searchAction), isLeft: false)
+    }
+    
+    
+    //初始化视图
+    func createHomePageView() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        //推荐
+        recommendView = CBRecommendView()
+        view.addSubview(recommendView!)
+        
+        recommendView?.snp_makeConstraints(closure: {
+            [weak self]
+            (make) in
+            make.edges.equalTo(self!.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
+        })
     }
     
     //扫一扫
@@ -46,16 +66,6 @@ class CookBookViewController: BaseViewController {
         
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension CookBookViewController: KTCDownloaderDelegate{
@@ -67,8 +77,15 @@ extension CookBookViewController: KTCDownloaderDelegate{
     
     //下载成功
     func downloader(downloader: KTCDownloader, didFinishWithData data: NSData?){
-        let str = NSString(data: data!, encoding: NSUTF8StringEncoding)
-        print(str)
+        
+        if let jsonData = data {
+            let model = CBRecommendModel.parseModel(jsonData)
+            //显示数据
+            dispatch_async(dispatch_get_main_queue(), {
+                [weak self] in
+                self!.recommendView?.model = model
+            })
+        }
     }
 
 

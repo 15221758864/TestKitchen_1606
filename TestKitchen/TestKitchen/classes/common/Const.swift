@@ -18,7 +18,6 @@ public let kScreenHeight = UIScreen.mainScreen().bounds.height
 //大部分是Post请求
 public let kHostUrl = "http://api.izhangchu.com/?appVersion=4.5&sysVersion=9.3.2&devModel=iPhone"
 
-
 //一、食谱
 //1、推荐
 //首页推荐参数

@@ -3,6 +3,7 @@ platform :ios, '9.0'
 use_frameworks!
 target 'TestKitchen' do
 	pod 'Alamofire', '~> 3.4'
+	pod 'SwiftyJSON'
 	pod 'Kingfisher', '~> 2.4'
 	pod 'XWSwiftRefresh', '~> 0.1.9' 
 	pod 'SnapKit', '~> 0.15.0'
