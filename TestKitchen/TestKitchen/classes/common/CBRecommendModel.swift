@@ -30,11 +30,9 @@ class CBRecommendModel: NSObject {
         
         let dataDict = jsonData["data"]
         model.data = CBRecommendDataModel.parseModel(dataDict)
-        
+
         return model
     }
-    
-    
 }
 
 class CBRecommendDataModel: NSObject {

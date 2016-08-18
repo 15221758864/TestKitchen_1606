@@ -50,7 +50,6 @@ class MainTabBarController: UITabBarController {
         var imageNames = [String]()//tabbar上面的图片
         var ctrlNames = [String]()
         var titleNames = [String]()
-        var selectImageNames = [String]()
         
         if let tmpArray = self.array{
             for dict in tmpArray {
@@ -70,7 +69,6 @@ class MainTabBarController: UITabBarController {
              */
             titleNames = ["食材", "社区", "商城", "食客", "我的"]
             imageNames = ["home", "community", "shop", "shike", "mine"]
-            selectImageNames = ["home", "community", "shop", "shike", "mine"]
             
         }
         var vCtrlArray = Array<UINavigationController>()
