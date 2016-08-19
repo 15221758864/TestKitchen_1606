@@ -30,7 +30,6 @@ class CBRecommendView: UIView, UITableViewDelegate, UITableViewDataSource {
             (make) in
             make.edges.equalTo(self!)
         })
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,7 +46,6 @@ extension CBRecommendView{
             //广告的数据
             sectionNum += (model?.data?.widgetList?.count)!
         }
-        
         return sectionNum
     }
     
@@ -65,9 +63,10 @@ extension CBRecommendView{
                 rowNum = 1
             }else if listModel?.widget_type?.integerValue == WidgeType.RedPackage.rawValue{
                 rowNum = 1
+            }else if listModel?.widget_type?.integerValue == WidgeType.NewProduct.rawValue{
+                rowNum = 1
             }
         }
-        
         return rowNum
     }
     
@@ -78,7 +77,6 @@ extension CBRecommendView{
             if model?.data?.banner?.count > 0 {
                 height = 160
             }
-            
         }else{
             //其他的情况
             let listModel = model?.data?.widgetList![indexPath.section-1]
@@ -86,12 +84,11 @@ extension CBRecommendView{
                 height = 80
             }else if listModel?.widget_type?.integerValue == WidgeType.RedPackage.rawValue{
                 height = 80
+            }else if listModel?.widget_type?.integerValue == WidgeType.NewProduct.rawValue{
+                height = 300 //今日新品
             }
-
-            
         }
         return height
-        
     }
     
     
@@ -110,11 +107,10 @@ extension CBRecommendView{
                 cell = CBRecommendLikeCell.createLikeCellFor(tableView, atIndexPath: indexPath, withListModel: listModel!)
             }else if listModel?.widget_type?.integerValue == WidgeType.RedPackage.rawValue{
                 cell = CBRedPacketCell.createRedPacketCellFor(tableView, atIndexPath: indexPath, withListModel: listModel!)
+            }else if listModel?.widget_type?.integerValue == WidgeType.NewProduct.rawValue{
+                 cell = CBRecommendNewCell.createNewCellFor(tableView, atIndexPath: indexPath, withListModel: listModel!)
             }
-            
         }
-        
-        
         return cell
     }
     
@@ -127,21 +123,22 @@ extension CBRecommendView{
             if listModel?.widget_type?.integerValue == WidgeType.GuessYourLike.rawValue {
                 //猜你喜欢
                 headerView = CBSearchHeaderView(frame: CGRectMake(0, 0, kScreenWidth, 44))
-                
+            }else if listModel?.widget_type?.integerValue == WidgeType.NewProduct.rawValue {
+                //今日新品
+                let tmpView = CBHeaderView(frame: CGRectMake(0, 0, kScreenWidth, 44))
+                tmpView.configTitle((listModel?.title)!)
+                headerView = tmpView
             }
-            
         }
         return headerView
-        
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         var height: CGFloat = 0
-        
         if section > 0 {
             //其他的情况
             let listModel = model?.data?.widgetList![section-1]
-            if listModel?.widget_type?.integerValue == WidgeType.GuessYourLike.rawValue {
+            if listModel?.widget_type?.integerValue == WidgeType.GuessYourLike.rawValue || listModel?.widget_type?.integerValue == WidgeType.NewProduct.rawValue{
                 //猜你喜欢
                 height = 44
             }

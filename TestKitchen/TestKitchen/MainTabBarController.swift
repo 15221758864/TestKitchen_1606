@@ -152,7 +152,7 @@ class MainTabBarController: UITabBarController {
     }
     func clickBtn(curBtn: UIButton) {
         //1取消之前选中按钮状态
-        let lastBtnView = self.view.viewWithTag(300+selectedIndex)
+        let lastBtnView = bgView!.viewWithTag(300+selectedIndex)
         if let tmpBtn = lastBtnView {
             //上次选中的按钮
             let lastBtn = tmpBtn as! UIButton

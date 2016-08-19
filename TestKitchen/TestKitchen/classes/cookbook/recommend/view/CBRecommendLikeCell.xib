@@ -15,28 +15,24 @@
                 <subviews>
                     <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h61-Gl-XmY" userLabel="firstBtn">
                         <rect key="frame" x="1" y="1" width="80" height="60"/>
-                        <state key="normal" title="--"/>
                         <connections>
                             <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jg1-aB-phy"/>
                         </connections>
                     </button>
                     <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4Y-6T-HAo" userLabel="secondBtn">
                         <rect key="frame" x="91" y="0.0" width="80" height="60"/>
-                        <state key="normal" title="--"/>
                         <connections>
                             <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kwo-EU-8H4"/>
                         </connections>
                     </button>
                     <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-to-E53" userLabel="thirdBtn">
                         <rect key="frame" x="182" y="0.0" width="80" height="60"/>
-                        <state key="normal" title="--"/>
                         <connections>
                             <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RSg-8z-bw6"/>
                         </connections>
                     </button>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FO-ZL-ZGj" userLabel="forthBtn">
                         <rect key="frame" x="275" y="0.0" width="80" height="60"/>
-                        <state key="normal" title="--"/>
                         <connections>
                             <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qnm-oH-ZOx"/>
                         </connections>
