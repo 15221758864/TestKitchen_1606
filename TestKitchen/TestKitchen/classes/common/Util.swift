@@ -16,10 +16,12 @@ import Foundation
 //食材首页推荐的数据类型
 public enum WidgeType: Int{
 
-    case GuessYourLike = 1 //猜你喜欢
-    case RedPackage = 2      //红包入口
-    case NewProduct = 5
-
+    case GuessYourLike = 1  //猜你喜欢
+    case RedPackage = 2     //红包入口
+    case NewProduct = 5     //今日新品
+    case Special = 3        //早餐日记 健康一百岁等
+    case Scene = 9          //全部场景
+    case Talent = 4         //推荐达人
 }
 
 

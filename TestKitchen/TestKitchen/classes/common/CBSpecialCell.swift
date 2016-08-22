@@ -63,9 +63,35 @@ class CBSpecialCell: UITableViewCell {
 
         }
         
-        
-        
-        
+        //列举菜例的图片显示
+        for i in 0..<4 {
+            //图片数据在数组中的序号
+            //i        0  1  2  3
+            //index    3  5  7  9
+            //index-3  0  2  4  6
+            
+            let index = i*2+3
+            if model?.widget_data?.count>index {
+                let imageModel = model?.widget_data![index]
+                if imageModel?.type == "image" {
+                    //获取按钮视图
+                    let subView = contentView.viewWithTag(200+i)
+                    if subView?.isKindOfClass(UIButton.self) == true {
+                        let url = NSURL(string: (imageModel?.content)!)
+                        let btn = subView as! UIButton
+                        btn.kf_setImageWithURL(url, forState: .Normal, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
+                    }
+                    
+                    
+                }
+            }
+        }
+        //描述文字
+        let subView = contentView.viewWithTag(400)
+        if subView?.isKindOfClass(UILabel.self) == true {
+            let descLabel = subView as! UILabel
+            descLabel.text = model?.desc
+        }
     }
     
     
@@ -85,16 +111,22 @@ class CBSpecialCell: UITableViewCell {
         
     }
     
+    class func createSpecialCellFor(tableView: UITableView, atIndexPath indexPath: NSIndexPath, withListModel listModel: CBRecommendWidgetListModel)->CBSpecialCell{
+        let cellID = "specialCellID"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellID) as? CBSpecialCell
+        if cell == nil {
+            cell = NSBundle.mainBundle().loadNibNamed("CBSpecialCell", owner: nil, options: nil).last as? CBSpecialCell
+        }
+        cell?.model = listModel
+        return cell!
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

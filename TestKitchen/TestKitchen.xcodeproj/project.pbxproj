@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		71C603E467C14891A36C8D23 /* Pods_TestKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A24B9C2600E3C93CE85320 /* Pods_TestKitchen.framework */; };
+		A00ACBAB1D6A91D200FBBD36 /* CBSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00ACBA91D6A91D200FBBD36 /* CBSceneCell.swift */; };
+		A00ACBAC1D6A91D200FBBD36 /* CBSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00ACBAA1D6A91D200FBBD36 /* CBSceneCell.xib */; };
+		A00ACBAF1D6A988600FBBD36 /* CBTalentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00ACBAD1D6A988600FBBD36 /* CBTalentTableViewCell.swift */; };
+		A00ACBB01D6A988600FBBD36 /* CBTalentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00ACBAE1D6A988600FBBD36 /* CBTalentTableViewCell.xib */; };
+		A00ACBB31D6AA74500FBBD36 /* CBWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00ACBB11D6AA74500FBBD36 /* CBWorksCell.swift */; };
+		A00ACBB41D6AA74500FBBD36 /* CBWorksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00ACBB21D6AA74500FBBD36 /* CBWorksCell.xib */; };
 		A02466E31D654A85007F15B0 /* g2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A02466E21D654A85007F15B0 /* g2.jpg */; };
 		A02466E51D654CA2007F15B0 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02466E41D654CA2007F15B0 /* Util.swift */; };
 		A02466E71D655BF2007F15B0 /* CBSearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02466E61D655BF2007F15B0 /* CBSearchHeaderView.swift */; };
@@ -116,6 +122,12 @@
 		32A24B9C2600E3C93CE85320 /* Pods_TestKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1A5CBB1BE7204A0F981906 /* Pods-TestKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.release.xcconfig"; sourceTree = "<group>"; };
 		7454170C44817FD460B832B7 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		A00ACBA91D6A91D200FBBD36 /* CBSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBSceneCell.swift; path = TestKitchen/classes/cookbook/recommend/view/CBSceneCell.swift; sourceTree = SOURCE_ROOT; };
+		A00ACBAA1D6A91D200FBBD36 /* CBSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBSceneCell.xib; path = TestKitchen/classes/cookbook/recommend/view/CBSceneCell.xib; sourceTree = SOURCE_ROOT; };
+		A00ACBAD1D6A988600FBBD36 /* CBTalentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBTalentTableViewCell.swift; path = TestKitchen/classes/cookbook/recommend/view/CBTalentTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A00ACBAE1D6A988600FBBD36 /* CBTalentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBTalentTableViewCell.xib; path = TestKitchen/classes/cookbook/recommend/view/CBTalentTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A00ACBB11D6AA74500FBBD36 /* CBWorksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBWorksCell.swift; path = TestKitchen/classes/cookbook/recommend/view/CBWorksCell.swift; sourceTree = SOURCE_ROOT; };
+		A00ACBB21D6AA74500FBBD36 /* CBWorksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBWorksCell.xib; path = TestKitchen/classes/cookbook/recommend/view/CBWorksCell.xib; sourceTree = SOURCE_ROOT; };
 		A02466E21D654A85007F15B0 /* g2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = g2.jpg; sourceTree = "<group>"; };
 		A02466E41D654CA2007F15B0 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A02466E61D655BF2007F15B0 /* CBSearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBSearchHeaderView.swift; path = TestKitchen/classes/common/CBSearchHeaderView.swift; sourceTree = SOURCE_ROOT; };
@@ -656,9 +668,9 @@
 			isa = PBXGroup;
 			children = (
 				A060B2FC1D63FE4E00CEF3E3 /* CBRecommendView.swift */,
-				A0D4DCEF1D64004E00306FBB /* CBRecommendADCell.swift */,
 				A0299CBD1D66AC2C00C4E697 /* CBHeaderView.swift */,
 				A02466E61D655BF2007F15B0 /* CBSearchHeaderView.swift */,
+				A0D4DCEF1D64004E00306FBB /* CBRecommendADCell.swift */,
 				A0D4DCF01D64004E00306FBB /* CBRecommendADCell.xib */,
 				A0D4DCF71D64185A00306FBB /* CBRecommendLikeCell.swift */,
 				A0D4DCF81D64185A00306FBB /* CBRecommendLikeCell.xib */,
@@ -668,6 +680,12 @@
 				A0299CB61D66958700C4E697 /* CBRecommendNewCell.xib */,
 				A0299CC11D66B26500C4E697 /* CBSpecialCell.swift */,
 				A0299CC21D66B26500C4E697 /* CBSpecialCell.xib */,
+				A00ACBA91D6A91D200FBBD36 /* CBSceneCell.swift */,
+				A00ACBAA1D6A91D200FBBD36 /* CBSceneCell.xib */,
+				A00ACBAD1D6A988600FBBD36 /* CBTalentTableViewCell.swift */,
+				A00ACBAE1D6A988600FBBD36 /* CBTalentTableViewCell.xib */,
+				A00ACBB11D6AA74500FBBD36 /* CBWorksCell.swift */,
+				A00ACBB21D6AA74500FBBD36 /* CBWorksCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -808,10 +826,12 @@
 				A0CFE4201D62BA8800C75416 /* nav_back_white.png in Resources */,
 				A0CFE3FF1D62A2AD00C75416 /* community_select@3x.png in Resources */,
 				A028F0381D61563400DFCFF6 /* AppIcon40x40@3x.png in Resources */,
+				A00ACBB01D6A988600FBBD36 /* CBTalentTableViewCell.xib in Resources */,
 				A0299CC41D66B26500C4E697 /* CBSpecialCell.xib in Resources */,
 				A028F05B1D61690100DFCFF6 /* Ctrl.json in Resources */,
 				A028EFDC1D61534600DFCFF6 /* LaunchScreen.storyboard in Resources */,
 				A0CFE40C1D62A2AD00C75416 /* shike_normal@2x.png in Resources */,
+				A00ACBAC1D6A91D200FBBD36 /* CBSceneCell.xib in Resources */,
 				A0CFE4071D62A2AD00C75416 /* mine_select@3x.png in Resources */,
 				A02466E31D654A85007F15B0 /* g2.jpg in Resources */,
 				A02466E91D6562E6007F15B0 /* search1.png in Resources */,
@@ -846,6 +866,7 @@
 				A028F03A1D61563400DFCFF6 /* AppIcon60x60@3x.png in Resources */,
 				A0CFE40A1D62A2AD00C75416 /* report_select@2x.png in Resources */,
 				A0299CBB1D669A5400C4E697 /* play-A@2x.png in Resources */,
+				A00ACBB41D6AA74500FBBD36 /* CBWorksCell.xib in Resources */,
 				A028F0361D61563400DFCFF6 /* AppIcon29x29@3x.png in Resources */,
 				A0CFE4261D62BA8800C75416 /* search@3x.png in Resources */,
 			);
@@ -925,6 +946,7 @@
 				A028F0451D615BBB00DFCFF6 /* BaseViewController.swift in Sources */,
 				A02466E71D655BF2007F15B0 /* CBSearchHeaderView.swift in Sources */,
 				A028F0491D615C2400DFCFF6 /* CommunityViewController.swift in Sources */,
+				A00ACBAF1D6A988600FBBD36 /* CBTalentTableViewCell.swift in Sources */,
 				A028F0471D615BFF00DFCFF6 /* CookBookViewController.swift in Sources */,
 				A0D4DCF91D64185A00306FBB /* CBRecommendLikeCell.swift in Sources */,
 				A0299CC31D66B26500C4E697 /* CBSpecialCell.swift in Sources */,
@@ -934,9 +956,11 @@
 				A02466E51D654CA2007F15B0 /* Util.swift in Sources */,
 				A028EFD21D61534600DFCFF6 /* AppDelegate.swift in Sources */,
 				A028F05E1D61745D00DFCFF6 /* UIView+Util.swift in Sources */,
+				A00ACBB31D6AA74500FBBD36 /* CBWorksCell.swift in Sources */,
 				A028F04F1D615C7E00DFCFF6 /* FoodClassViewController.swift in Sources */,
 				A028F04D1D615C6500DFCFF6 /* ProfileViewController.swift in Sources */,
 				A060B2FD1D63FE4E00CEF3E3 /* CBRecommendView.swift in Sources */,
+				A00ACBAB1D6A91D200FBBD36 /* CBSceneCell.swift in Sources */,
 				A028F0431D615B6A00DFCFF6 /* MainTabBarController.swift in Sources */,
 				A0D4DCF41D64091D00306FBB /* UIImageView+Util.swift in Sources */,
 				A0CFE4281D62BE8000C75416 /* KTCDownloader.swift in Sources */,
